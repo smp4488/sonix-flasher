@@ -13,7 +13,7 @@ import traceback
 # TODO: dry-run support to ensure flashing doesn't crash
 
 RESPONSE_LEN = 64
-MAX_FIRMWARE = 0x7800
+MAX_FIRMWARE = 0x10000
 QMK_OFFSET = 0x200
 QMK_MAX_FIRMWARE = MAX_FIRMWARE - 0x200  # 0x200 for the jumploader
 
@@ -25,8 +25,8 @@ CMD_REBOOT = CMD_BASE + 7
 EXPECTED_STATUS = 0xFAFAFAFA
 
 DEVICE_DESC = {
-    (0x0c45, 0x7698): "Womier K66",
-    (0x0c45, 0x7010): "Womier K66 (bootloader)"
+    (0x0c45, 0x766b): "Kemove DK63",
+    (0x0c45, 0x7040): "Kemove DK63 (bootloader)"
 }
 
 def hid_set_feature(dev, report):
